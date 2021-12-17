@@ -1,0 +1,18 @@
+
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+    {% block title  %}
+    <title>register page</title>
+    {% endblock %}
+
+{% block body %}
+<div class="container">
+    <form method="POST" class="jumbotron">
+    {% csrf_token %}
+    <h2>RegisterPage</h2>
+
+    {{form|crispy}}
+    <button  type="submit">submit</button>
+</form>
+</div>
+{% endblock %}
